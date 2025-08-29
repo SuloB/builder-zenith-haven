@@ -8,7 +8,9 @@ function BrandMark() {
         <span className="absolute inset-0 rounded-full ring-1 ring-white/15" />
         <span className="font-extrabold text-white">P</span>
       </span>
-      <span className="sr-only sm:not-sr-only sm:font-semibold sm:text-white">Prism</span>
+      <span className="sr-only sm:not-sr-only sm:font-semibold sm:text-white">
+        Prism
+      </span>
     </Link>
   );
 }
@@ -41,7 +43,9 @@ export default function Layout() {
                 to={l.to}
                 className={({ isActive }) =>
                   `px-3 py-2 rounded-full text-sm font-medium transition-colors ${
-                    isActive ? "bg-white/10 text-white" : "text-white/80 hover:text-white hover:bg-white/10"
+                    isActive
+                      ? "bg-white/10 text-white"
+                      : "text-white/80 hover:text-white hover:bg-white/10"
                   }`
                 }
               >

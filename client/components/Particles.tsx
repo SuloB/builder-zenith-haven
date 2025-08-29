@@ -98,7 +98,6 @@ export default function Particles({ className }: Props) {
         ctx.arc(sx, sy, p.r * 0.7, 0, Math.PI * 2);
         ctx.fill();
 
-
         // rim light
         ctx.strokeStyle = `hsla(${p.hue + 10}, 90%, 75%, ${Math.min(0.7, p.alpha + 0.3)})`;
         ctx.lineWidth = 1.3;

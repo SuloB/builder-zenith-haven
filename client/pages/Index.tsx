@@ -49,7 +49,8 @@ export default function Index() {
               Unleash Your <GradientText>True Gaming</GradientText> Potential
             </h1>
             <p className="mt-6 max-w-xl text-white/70">
-              Undetectable by anti-cheat systems, consistently reliable during intense matches, and rigorously updated to maintain perfect
+              Undetectable by anti-cheat systems, consistently reliable during
+              intense matches, and rigorously updated to maintain perfect
               compatibility with the latest game versions.
             </p>
             <div className="mt-8 flex items-center gap-4">
@@ -81,17 +82,45 @@ export default function Index() {
                 <circle cx="500" cy="220" r="4" />
               </g>
               <g opacity="0.85">
-                <rect x="480" y="260" width="120" height="120" rx="16" className="fill-white/3 stroke-white/10" />
+                <rect
+                  x="480"
+                  y="260"
+                  width="120"
+                  height="120"
+                  rx="16"
+                  className="fill-white/3 stroke-white/10"
+                />
                 <g fill="white">
                   {Array.from({ length: 9 }).map((_, i) => (
-                    <rect key={i} x={500 + ((i % 3) * 32)} y={280 + (Math.floor(i / 3) * 32)} width="20" height="20" rx="4" className="fill-white/20" />
+                    <rect
+                      key={i}
+                      x={500 + (i % 3) * 32}
+                      y={280 + Math.floor(i / 3) * 32}
+                      width="20"
+                      height="20"
+                      rx="4"
+                      className="fill-white/20"
+                    />
                   ))}
                 </g>
               </g>
-              <text x="444" y="82" className="fill-white/70 text-[14px]">Streaming mode</text>
-              <text x="288" y="128" className="fill-white/70 text-[14px]">Kernel support</text>
-              <rect x="392" y="24" width="48" height="28" rx="6" className="fill-black/40 stroke-white/15" />
-              <text x="406" y="44" className="fill-white/90 text-[14px]">333</text>
+              <text x="444" y="82" className="fill-white/70 text-[14px]">
+                Streaming mode
+              </text>
+              <text x="288" y="128" className="fill-white/70 text-[14px]">
+                Kernel support
+              </text>
+              <rect
+                x="392"
+                y="24"
+                width="48"
+                height="28"
+                rx="6"
+                className="fill-black/40 stroke-white/15"
+              />
+              <text x="406" y="44" className="fill-white/90 text-[14px]">
+                333
+              </text>
             </svg>
           </div>
         </div>
@@ -116,7 +145,8 @@ export default function Index() {
                 Designed to meet your expectations
               </h2>
               <p className="mt-4 text-white/70">
-                Experience gaming dominance with our cutting‑edge features designed for competitive players.
+                Experience gaming dominance with our cutting‑edge features
+                designed for competitive players.
               </p>
             </div>
             <div className="relative z-10 mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">

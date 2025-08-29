@@ -16,7 +16,13 @@ const games: Game[] = [
     description:
       "Our Fortnite cheat provides you with the ultimate advantage in battle royale matches.",
     badge: "FREE",
-    tags: ["Advanced Aimbot", "ESP", "Triggerbot", "No Recoil & Spread", "HWID Cleaner"],
+    tags: [
+      "Advanced Aimbot",
+      "ESP",
+      "Triggerbot",
+      "No Recoil & Spread",
+      "HWID Cleaner",
+    ],
     plans: [
       { label: "Daily", price: "$4.99" },
       { label: "Weekly", price: "$14.99" },
@@ -27,7 +33,12 @@ const games: Game[] = [
     title: "CS2",
     description:
       "Professional‑grade tools for competitive CS2 play with undetectable stability.",
-    tags: ["Pixel‑perfect Triggerbot", "Wallhack", "Radar Hack", "Skin Changer"],
+    tags: [
+      "Pixel‑perfect Triggerbot",
+      "Wallhack",
+      "Radar Hack",
+      "Skin Changer",
+    ],
     plans: [
       { label: "Daily", price: "$2.99" },
       { label: "Weekly", price: "$7.99" },
@@ -49,7 +60,12 @@ const games: Game[] = [
     title: "Valorant",
     description:
       "Bypass Vanguard with our advanced Valorant cheat solutions for competitive play.",
-    tags: ["Numerous Aimbot", "Agent ESP", "Triggerbot", "Anti‑Report Protection"],
+    tags: [
+      "Numerous Aimbot",
+      "Agent ESP",
+      "Triggerbot",
+      "Anti‑Report Protection",
+    ],
     plans: [
       { label: "Daily", price: "$4.99" },
       { label: "Weekly", price: "$14.99" },
@@ -60,7 +76,12 @@ const games: Game[] = [
     title: "Apex Legends",
     description:
       "Dominate the Apex Games with our toolkit for aggressive and tactical playstyles.",
-    tags: ["Weapon Specific Aimbot", "Legend Specific ESP", "No Recoil & Spread", "Aim Lock Prioritization"],
+    tags: [
+      "Weapon Specific Aimbot",
+      "Legend Specific ESP",
+      "No Recoil & Spread",
+      "Aim Lock Prioritization",
+    ],
     plans: [
       { label: "Daily", price: "$2.99" },
       { label: "Weekly", price: "$7.99" },
@@ -71,7 +92,12 @@ const games: Game[] = [
     title: "Call of Duty",
     description:
       "Complete dominance across all Call of Duty titles with our multi‑game solution.",
-    tags: ["Adaptive Aimbot", "Customisable ESP", "Stream Safe", "Advanced UAV"],
+    tags: [
+      "Adaptive Aimbot",
+      "Customisable ESP",
+      "Stream Safe",
+      "Advanced UAV",
+    ],
     plans: [
       { label: "Daily", price: "$3.99" },
       { label: "Weekly", price: "$9.99" },
@@ -80,7 +106,15 @@ const games: Game[] = [
   },
 ];
 
-function Step({ index, label, active }: { index: number; label: string; active?: boolean }) {
+function Step({
+  index,
+  label,
+  active,
+}: {
+  index: number;
+  label: string;
+  active?: boolean;
+}) {
   return (
     <div className="flex items-center gap-3">
       <div
@@ -93,7 +127,9 @@ function Step({ index, label, active }: { index: number; label: string; active?:
       >
         {index}
       </div>
-      <span className={"text-sm " + (active ? "text-white" : "text-white/70")}>{label}</span>
+      <span className={"text-sm " + (active ? "text-white" : "text-white/70")}>
+        {label}
+      </span>
     </div>
   );
 }
@@ -121,7 +157,6 @@ function GameCard({ game }: { game: Game }) {
     <div className="relative group">
       {/* OUTER glow behind card */}
       <div className="pointer-events-none absolute -inset-3 rounded-3xl bg-gradient-to-r from-brand-rose/0 via-brand-fuchsia/45 to-brand-rose/0 blur-2xl opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
-      
 
       {/* Card body (clipped) */}
       <div className="relative overflow-hidden rounded-3xl border border-white/10 bg-[linear-gradient(180deg,rgba(255,255,255,0.04),rgba(255,255,255,0.02))] p-4 shadow-[0_0_1px_0_rgba(255,255,255,0.08)] backdrop-blur transition hover:bg-white/[0.04]">
@@ -150,7 +185,7 @@ function GameCard({ game }: { game: Game }) {
         </div>
 
         <div className="pointer-events-none absolute inset-0 rounded-3xl ring-1 ring-white/10" />
-      <div className="pointer-events-none absolute -inset-px rounded-3xl opacity-0 ring-2 ring-brand-rose/40 transition group-hover:opacity-100" />
+        <div className="pointer-events-none absolute -inset-px rounded-3xl opacity-0 ring-2 ring-brand-rose/40 transition group-hover:opacity-100" />
       </div>
     </div>
   );
