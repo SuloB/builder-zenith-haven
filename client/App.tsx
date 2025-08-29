@@ -29,8 +29,8 @@ const App = () => (
             <Route path="shop" element={<Shop />} />
             <Route path="status" element={<Status />} />
             <Route path="signin" element={<SignIn />} />
+            <Route path="*" element={<NotFound />} />
           </Route>
-          <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>
     </TooltipProvider>
