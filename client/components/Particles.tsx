@@ -98,20 +98,6 @@ export default function Particles({ className }: Props) {
         ctx.arc(sx, sy, p.r * 0.7, 0, Math.PI * 2);
         ctx.fill();
 
-        // glossy reflection stripe
-        ctx.save();
-        ctx.beginPath();
-        ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
-        ctx.clip();
-        ctx.translate(p.x, p.y);
-        ctx.rotate(p.rot);
-        const lg = ctx.createLinearGradient(-p.r, 0, p.r, 0);
-        lg.addColorStop(0.45, "rgba(255,255,255,0)");
-        lg.addColorStop(0.5, "rgba(255,255,255,0.6)");
-        lg.addColorStop(0.55, "rgba(255,255,255,0)");
-        ctx.fillStyle = lg as unknown as string;
-        ctx.fillRect(-p.r, -p.r, p.r * 2, p.r * 2);
-        ctx.restore();
 
         // rim light
         ctx.strokeStyle = `hsla(${p.hue + 10}, 90%, 75%, ${Math.min(0.7, p.alpha + 0.3)})`;
@@ -139,7 +125,13 @@ export default function Particles({ className }: Props) {
         ctx.strokeStyle = "rgba(255,240,200,0.9)";
         ctx.lineWidth = 1;
         ctx.stroke();
-        // (string removed as requested)
+        // hanging string
+        ctx.beginPath();
+        ctx.moveTo(p.x, capY - 0.5);
+        ctx.lineTo(p.x, capY - p.stringLen);
+        ctx.strokeStyle = `rgba(255,255,255,0.35)`;
+        ctx.lineWidth = 1;
+        ctx.stroke();
       }
 
       ctx.globalCompositeOperation = "source-over";
