@@ -70,7 +70,7 @@ export default function Layout() {
       </main>
 
       <footer className="relative mt-24">
-        <div className="pointer-events-none absolute inset-x-0 bottom-0 h-56 bg-gradient-to-t from-rose-600/40 via-fuchsia-600/20 to-transparent blur-[60px]" />
+        <div className="pointer-events-none absolute inset-x-0 bottom-0 h-56 bg-gradient-to-t from-brand-rose/40 via-brand-fuchsia/20 to-transparent blur-[60px]" />
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 pb-10 pt-24">
           <div className="text-center text-sm text-white/60">
             <p>made with heart © {year}</p>
