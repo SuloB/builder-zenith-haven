@@ -20,7 +20,7 @@ function FeatureCard({
 }) {
   return (
     <div className="group relative rounded-2xl border border-white/10 bg-white/[0.02] p-6 shadow-[inset_0_1px_0_rgba(255,255,255,0.03)] transition hover:bg-white/[0.04]">
-      <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-gradient-to-br from-brand-rose/30 to-brand-fuchsia/30 text-rose-200 ring-1 ring-white/10">
+      <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-gradient-to-br from-brand-rose/30 to-brand-fuchsia/30 text-brand-rose ring-1 ring-white/10">
         <Icon className="h-6 w-6" />
       </div>
       <h3 className="mt-4 text-lg font-semibold text-white">{title}</h3>
@@ -41,7 +41,7 @@ export default function Index() {
         </div>
         <div className="mx-auto grid max-w-7xl grid-cols-1 gap-12 px-4 py-20 sm:px-6 lg:grid-cols-2 lg:gap-8 lg:py-28 lg:px-8">
           <div>
-            <p className="text-xs font-semibold uppercase tracking-[0.2em] text-rose-300/80">
+            <p className="text-xs font-semibold uppercase tracking-[0.2em] text-brand-rose/80">
               Dominate the competition
             </p>
             <h1 className="mt-4 text-4xl font-extrabold leading-tight text-white md:text-6xl">
@@ -67,8 +67,8 @@ export default function Index() {
             <svg viewBox="0 0 640 420" className="h-full w-full" aria-hidden>
               <defs>
                 <linearGradient id="g1" x1="0" x2="1">
-                  <stop offset="0%" stopColor="rgb(244 63 94 / 0.6)" />
-                  <stop offset="100%" stopColor="rgb(217 70 239 / 0.6)" />
+                  <stop offset="0%" stopColor="rgb(59 130 246 / 0.6)" />
+                  <stop offset="100%" stopColor="rgb(167 139 250 / 0.6)" />
                 </linearGradient>
               </defs>
               <g stroke="url(#g1)" strokeWidth="2" opacity="0.7">
