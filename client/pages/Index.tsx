@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 function GradientText({ children }: { children: React.ReactNode }) {
   return (
-    <span className="bg-gradient-to-r from-rose-400 via-fuchsia-400 to-rose-300 bg-clip-text text-transparent">
+    <span className="bg-gradient-to-r from-brand-rose via-brand-fuchsia to-brand-rose bg-clip-text text-transparent">
       {children}
     </span>
   );
@@ -20,12 +20,12 @@ function FeatureCard({
 }) {
   return (
     <div className="group relative rounded-2xl border border-white/10 bg-white/[0.02] p-6 shadow-[inset_0_1px_0_rgba(255,255,255,0.03)] transition hover:bg-white/[0.04]">
-      <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-gradient-to-br from-rose-500/30 to-fuchsia-600/30 text-rose-200 ring-1 ring-white/10">
+      <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-gradient-to-br from-brand-rose/30 to-brand-fuchsia/30 text-rose-200 ring-1 ring-white/10">
         <Icon className="h-6 w-6" />
       </div>
       <h3 className="mt-4 text-lg font-semibold text-white">{title}</h3>
       <p className="mt-2 text-sm leading-6 text-white/70">{description}</p>
-      <div className="pointer-events-none absolute -inset-px rounded-2xl opacity-0 ring-2 ring-rose-500/40 transition group-hover:opacity-100" />
+      <div className="pointer-events-none absolute -inset-px rounded-2xl opacity-0 ring-2 ring-brand-rose/40 transition group-hover:opacity-100" />
     </div>
   );
 }
@@ -36,8 +36,8 @@ export default function Index() {
       {/* HERO */}
       <section className="relative overflow-hidden">
         <div className="absolute inset-0 -z-10">
-          <div className="absolute left-1/2 top-24 h-[600px] w-[600px] -translate-x-1/2 rounded-full bg-rose-500/10 blur-[120px]" />
-          <div className="absolute right-0 top-1/3 h-[520px] w-[520px] translate-x-1/4 rounded-full bg-fuchsia-600/10 blur-[100px]" />
+          <div className="absolute left-1/2 top-24 h-[600px] w-[600px] -translate-x-1/2 rounded-full bg-brand-rose/10 blur-[120px]" />
+          <div className="absolute right-0 top-1/3 h-[520px] w-[520px] translate-x-1/4 rounded-full bg-brand-fuchsia/10 blur-[100px]" />
         </div>
         <div className="mx-auto grid max-w-7xl grid-cols-1 gap-12 px-4 py-20 sm:px-6 lg:grid-cols-2 lg:gap-8 lg:py-28 lg:px-8">
           <div>
@@ -54,7 +54,7 @@ export default function Index() {
             <div className="mt-8 flex items-center gap-4">
               <Link
                 to="/shop"
-                className="inline-flex items-center gap-2 rounded-full bg-gradient-to-br from-rose-500 to-fuchsia-600 px-5 py-3 text-sm font-semibold text-white shadow-[0_8px_30px_rgb(217,70,239,0.35)] transition hover:brightness-110 focus:outline-none focus:ring-2 focus:ring-rose-400/60"
+                className="inline-flex items-center gap-2 rounded-full bg-gradient-to-br from-brand-rose to-brand-fuchsia px-5 py-3 text-sm font-semibold text-white shadow-[0_8px_30px_rgb(217,70,239,0.35)] transition hover:brightness-110 focus:outline-none focus:ring-2 focus:ring-brand-rose/60"
               >
                 Unlock Access
                 <ArrowRight className="h-4 w-4" />
@@ -133,7 +133,7 @@ export default function Index() {
 
             {/* Large PRISM word */}
             <div className="pointer-events-none absolute inset-x-0 bottom-0 translate-y-1/3 select-none text-center font-extrabold tracking-tight text-transparent">
-              <span className="bg-gradient-to-t from-rose-600/30 via-fuchsia-600/20 to-transparent bg-clip-text text-[18vw] leading-none opacity-40">
+              <span className="bg-gradient-to-t from-brand-rose/30 via-brand-fuchsia/20 to-transparent bg-clip-text text-[18vw] leading-none opacity-40">
                 Prism
               </span>
             </div>
