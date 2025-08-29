@@ -108,16 +108,16 @@ function Tag({ children }: { children: React.ReactNode }) {
 
 function CTAButton() {
   return (
-    <button className="relative w-full overflow-hidden rounded-2xl bg-gradient-to-r from-brand-rose to-brand-fuchsia px-4 py-3 text-center text-sm font-semibold text-white shadow-[0_8px_30px_theme(colors.brand.fuchsia/.25)] ring-1 ring-white/10 transition hover:brightness-110 hover:shadow-[0_0_36px_theme(colors.brand.fuchsia/.45)] focus:outline-none focus:ring-2 focus:ring-brand-rose/60">
+    <button className="relative w-full overflow-hidden rounded-2xl bg-gradient-to-r from-brand-rose to-brand-fuchsia px-4 py-3 text-center text-sm font-semibold text-white shadow-[0_8px_30px_theme(colors.brand.fuchsia/.25)] ring-1 ring-white/10 transition hover:brightness-110 hover:shadow-[0_0_40px_theme(colors.brand.fuchsia/.55)] focus:outline-none focus:ring-2 focus:ring-brand-rose/60">
       <span className="relative z-10">Add To The Cart</span>
-      <span className="pointer-events-none absolute -inset-1 rounded-2xl bg-gradient-to-r from-brand-rose to-brand-fuchsia blur-xl opacity-0 transition-opacity duration-300 group-hover:opacity-60 hover:opacity-70" />
+      <span className="pointer-events-none absolute -inset-1 rounded-2xl bg-gradient-to-r from-brand-rose to-brand-fuchsia blur-xl opacity-0 transition-opacity duration-300 group-hover:opacity-60 hover:opacity-80" />
     </button>
   );
 }
 
 function GameCard({ game }: { game: Game }) {
   return (
-    <div className="group relative overflow-hidden rounded-3xl border border-white/10 bg-[linear-gradient(180deg,rgba(255,255,255,0.04),rgba(255,255,255,0.02))] p-4 shadow-[0_0_1px_0_rgba(255,255,255,0.08)] backdrop-blur transition-shadow duration-300 group-hover:shadow-[0_0_40px_theme(colors.brand.fuchsia/.35)]">
+    <div className="group relative overflow-hidden rounded-3xl border border-white/10 bg-[linear-gradient(180deg,rgba(255,255,255,0.04),rgba(255,255,255,0.02))] p-4 shadow-[0_0_1px_0_rgba(255,255,255,0.08)] backdrop-blur transition-shadow duration-300 group-hover:shadow-[0_0_60px_theme(colors.brand.fuchsia/.45)]">
       {/* top preview */}
       <div className="relative h-44 w-full overflow-hidden rounded-2xl bg-gradient-to-br from-zinc-800/60 via-zinc-900/50 to-black/60">
         <div className="absolute inset-0 bg-[radial-gradient(500px_200px_at_60%_0%,theme(colors.brand.rose/.25),transparent)]" />
@@ -144,7 +144,8 @@ function GameCard({ game }: { game: Game }) {
       </div>
 
       <div className="pointer-events-none absolute inset-0 rounded-3xl ring-1 ring-white/10" />
-      <div className="pointer-events-none absolute -inset-px rounded-3xl opacity-0 ring-2 ring-brand-rose/30 transition group-hover:opacity-100" />
+      <div className="pointer-events-none absolute -inset-1 rounded-3xl opacity-0 bg-gradient-to-r from-brand-rose/0 via-brand-fuchsia/35 to-brand-rose/0 blur-xl transition-opacity duration-300 group-hover:opacity-100" />
+      <div className="pointer-events-none absolute -inset-px rounded-3xl opacity-0 ring-2 ring-brand-rose/40 transition group-hover:opacity-100" />
     </div>
   );
 }
