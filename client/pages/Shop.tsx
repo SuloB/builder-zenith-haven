@@ -109,7 +109,7 @@ function Tag({ children }: { children: React.ReactNode }) {
 function CTAButton() {
   return (
     <div className="relative group/cta">
-      <div className="pointer-events-none absolute -inset-3 rounded-3xl bg-gradient-to-r from-brand-rose/0 via-brand-fuchsia/50 to-brand-rose/0 blur-2xl opacity-0 transition-opacity duration-300 group-hover/cta:opacity-100" />
+      
       <button className="relative z-10 w-full rounded-2xl bg-gradient-to-r from-brand-rose to-brand-fuchsia px-4 py-3 text-center text-sm font-semibold text-white ring-1 ring-white/10 transition hover:brightness-110 focus:outline-none focus:ring-2 focus:ring-brand-rose/60">
         Add To The Cart
       </button>
@@ -121,7 +121,7 @@ function GameCard({ game }: { game: Game }) {
   return (
     <div className="relative group">
       {/* OUTER glow behind card */}
-      <div className="pointer-events-none absolute -inset-4 rounded-3xl bg-gradient-to-r from-brand-rose/0 via-brand-fuchsia/45 to-brand-rose/0 blur-2xl opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
+      
 
       {/* Card body (clipped) */}
       <div className="relative overflow-hidden rounded-3xl border border-white/10 bg-[linear-gradient(180deg,rgba(255,255,255,0.04),rgba(255,255,255,0.02))] p-4 shadow-[0_0_1px_0_rgba(255,255,255,0.08)] backdrop-blur">
