@@ -1,5 +1,6 @@
 import { ArrowRight, Eye, Shield, Target, Zap } from "lucide-react";
 import { Link } from "react-router-dom";
+import Particles from "@/components/Particles";
 
 function GradientText({ children }: { children: React.ReactNode }) {
   return (
