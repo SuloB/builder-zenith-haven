@@ -108,8 +108,8 @@ function Tag({ children }: { children: React.ReactNode }) {
 
 function CTAButton() {
   return (
-    <div className="relative">
-      <div className="pointer-events-none absolute -inset-3 rounded-3xl bg-gradient-to-r from-brand-rose/0 via-brand-fuchsia/50 to-brand-rose/0 blur-2xl opacity-70" />
+    <div className="relative group/cta">
+      <div className="pointer-events-none absolute -inset-3 rounded-3xl bg-gradient-to-r from-brand-rose/0 via-brand-fuchsia/50 to-brand-rose/0 blur-2xl opacity-0 transition-opacity duration-300 group-hover/cta:opacity-100" />
       <button className="relative z-10 w-full rounded-2xl bg-gradient-to-r from-brand-rose to-brand-fuchsia px-4 py-3 text-center text-sm font-semibold text-white ring-1 ring-white/10 transition hover:brightness-110 focus:outline-none focus:ring-2 focus:ring-brand-rose/60">
         Add To The Cart
       </button>
