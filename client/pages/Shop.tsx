@@ -111,7 +111,7 @@ function PlanButton({ plan }: { plan: Plan }) {
     <button className="flex-1 rounded-xl bg-gradient-to-br from-brand-rose/30 to-brand-fuchsia/30 px-3 py-3 text-left text-sm text-white ring-1 ring-white/10 transition hover:brightness-110">
       <div className="flex items-center justify-between">
         <span className="text-white/90">{plan.label}</span>
-        <span className="rounded-md bg-black/30 px-2 py-0.5 text-rose-200">{plan.price}</span>
+        <span className="rounded-md bg-black/30 px-2 py-0.5 text-brand-rose">{plan.price}</span>
       </div>
     </button>
   );
