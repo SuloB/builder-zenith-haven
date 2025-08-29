@@ -87,7 +87,7 @@ function Step({ index, label, active }: { index: number; label: string; active?:
         className={
           "grid h-8 w-8 place-items-center rounded-full text-sm font-semibold " +
           (active
-            ? "bg-gradient-to-br from-rose-500 to-fuchsia-600 text-white ring-2 ring-white/20"
+            ? "bg-gradient-to-br from-brand-rose to-brand-fuchsia text-white ring-2 ring-white/20"
             : "bg-white/5 text-white/70 ring-1 ring-white/10")
         }
       >
@@ -101,14 +101,14 @@ function Step({ index, label, active }: { index: number; label: string; active?:
 function Tag({ children }: { children: React.ReactNode }) {
   return (
     <span className="inline-flex items-center gap-1 rounded-full border border-white/10 bg-white/[0.03] px-2.5 py-1 text-xs text-white/80">
-      <Check className="h-3.5 w-3.5 text-rose-300" /> {children}
+      <Check className="h-3.5 w-3.5 text-brand-rose" /> {children}
     </span>
   );
 }
 
 function PlanButton({ plan }: { plan: Plan }) {
   return (
-    <button className="flex-1 rounded-xl bg-gradient-to-br from-rose-600/30 to-fuchsia-600/30 px-3 py-3 text-left text-sm text-white ring-1 ring-white/10 transition hover:brightness-110">
+    <button className="flex-1 rounded-xl bg-gradient-to-br from-brand-rose/30 to-brand-fuchsia/30 px-3 py-3 text-left text-sm text-white ring-1 ring-white/10 transition hover:brightness-110">
       <div className="flex items-center justify-between">
         <span className="text-white/90">{plan.label}</span>
         <span className="rounded-md bg-black/30 px-2 py-0.5 text-rose-200">{plan.price}</span>
@@ -122,11 +122,11 @@ function GameCard({ game }: { game: Game }) {
     <div className="group relative overflow-hidden rounded-3xl border border-white/10 bg-[linear-gradient(180deg,rgba(255,255,255,0.04),rgba(255,255,255,0.02))] p-4 shadow-[0_0_1px_0_rgba(255,255,255,0.08)] backdrop-blur">
       {/* top preview */}
       <div className="relative h-44 w-full overflow-hidden rounded-2xl bg-gradient-to-br from-zinc-800/60 via-zinc-900/50 to-black/60">
-        <div className="absolute inset-0 bg-[radial-gradient(500px_200px_at_60%_0%,rgba(244,63,94,0.25),transparent)]" />
-        <div className="absolute inset-0 opacity-0 transition-opacity group-hover:opacity-100 bg-[radial-gradient(500px_200px_at_30%_100%,rgba(217,70,239,0.25),transparent)]" />
+        <div className="absolute inset-0 bg-[radial-gradient(500px_200px_at_60%_0%,theme(colors.brand.rose/.25),transparent)]" />
+        <div className="absolute inset-0 opacity-0 transition-opacity group-hover:opacity-100 bg-[radial-gradient(500px_200px_at_30%_100%,theme(colors.brand.fuchsia/.25),transparent)]" />
         {game.badge && (
           <span className="absolute left-3 top-3 inline-flex items-center gap-1 rounded-full bg-white/10 px-2.5 py-1 text-xs font-semibold text-white ring-1 ring-white/15">
-            <Star className="h-3.5 w-3.5 text-rose-300" /> {game.badge}
+            <Star className="h-3.5 w-3.5 text-brand-rose" /> {game.badge}
           </span>
         )}
       </div>
@@ -148,7 +148,7 @@ function GameCard({ game }: { game: Game }) {
       </div>
 
       <div className="pointer-events-none absolute inset-0 rounded-3xl ring-1 ring-white/10" />
-      <div className="pointer-events-none absolute -inset-px rounded-3xl opacity-0 ring-2 ring-rose-500/30 transition group-hover:opacity-100" />
+      <div className="pointer-events-none absolute -inset-px rounded-3xl opacity-0 ring-2 ring-brand-rose/30 transition group-hover:opacity-100" />
     </div>
   );
 }
@@ -192,7 +192,7 @@ export default function Shop() {
 
         {/* bottom decorative prism like in screenshots */}
         <div className="relative">
-          <div className="pointer-events-none absolute inset-x-0 bottom-0 h-48 bg-gradient-to-t from-rose-600/40 via-fuchsia-600/20 to-transparent blur-[50px]" />
+          <div className="pointer-events-none absolute inset-x-0 bottom-0 h-48 bg-gradient-to-t from-brand-rose/40 via-brand-fuchsia/20 to-transparent blur-[50px]" />
           <div className="pointer-events-none select-none text-center font-extrabold tracking-tight text-transparent">
             <span className="bg-gradient-to-t from-rose-600/30 via-fuchsia-600/20 to-transparent bg-clip-text text-[18vw] leading-none opacity-40">
               Prism
