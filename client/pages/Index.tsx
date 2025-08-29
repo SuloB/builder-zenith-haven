@@ -99,8 +99,18 @@ export default function Index() {
       {/* FEATURES */}
       <section className="relative">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="relative rounded-3xl border border-white/10 bg-white/[0.02] px-6 py-16 shadow-[0_0_1px_0_rgba(255,255,255,0.08)] backdrop-blur">
-            <div className="mx-auto max-w-3xl text-center">
+          <div className="relative overflow-hidden rounded-3xl border border-white/10 bg-white/[0.02] px-6 py-16 shadow-[0_0_1px_0_rgba(255,255,255,0.08)] backdrop-blur">
+            {/* Animated particles background */}
+            <div className="absolute inset-0">
+              <div className="absolute inset-0 opacity-60">
+                {/* eslint-disable-next-line @typescript-eslint/ban-ts-comment */}
+                {/* @ts-ignore */}
+                <Particles className="absolute inset-0" />
+              </div>
+              <div className="absolute inset-0 rounded-3xl ring-1 ring-white/10" />
+            </div>
+
+            <div className="relative z-10 mx-auto max-w-3xl text-center">
               <h2 className="text-3xl font-extrabold text-white md:text-4xl">
                 Designed to meet your expectations
               </h2>
@@ -108,7 +118,7 @@ export default function Index() {
                 Experience gaming dominance with our cutting‑edge features designed for competitive players.
               </p>
             </div>
-            <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+            <div className="relative z-10 mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
               <FeatureCard
                 icon={Eye}
                 title="Enhanced Visuals"
