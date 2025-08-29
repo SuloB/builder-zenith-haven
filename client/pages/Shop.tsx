@@ -106,13 +106,10 @@ function Tag({ children }: { children: React.ReactNode }) {
   );
 }
 
-function PlanButton({ plan }: { plan: Plan }) {
+function CTAButton() {
   return (
-    <button className="flex-1 rounded-xl bg-gradient-to-br from-brand-rose/30 to-brand-fuchsia/30 px-3 py-3 text-left text-sm text-white ring-1 ring-white/10 transition hover:brightness-110">
-      <div className="flex items-center justify-between">
-        <span className="text-white/90">{plan.label}</span>
-        <span className="rounded-md bg-black/30 px-2 py-0.5 text-brand-rose">{plan.price}</span>
-      </div>
+    <button className="w-full rounded-2xl bg-gradient-to-r from-brand-rose to-brand-fuchsia px-4 py-3 text-center text-sm font-semibold text-white shadow-[0_8px_30px_rgba(59,130,246,0.25)] ring-1 ring-white/10 transition hover:brightness-110 focus:outline-none focus:ring-2 focus:ring-brand-rose/60">
+      Add To The Cart
     </button>
   );
 }
@@ -140,10 +137,8 @@ function GameCard({ game }: { game: Game }) {
             <Tag key={t}>{t}</Tag>
           ))}
         </div>
-        <div className="mt-5 flex gap-2">
-          {game.plans.map((p) => (
-            <PlanButton key={p.label} plan={p} />
-          ))}
+        <div className="mt-5">
+          <CTAButton />
         </div>
       </div>
 
