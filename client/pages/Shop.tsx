@@ -108,44 +108,50 @@ function Tag({ children }: { children: React.ReactNode }) {
 
 function CTAButton() {
   return (
-    <button className="relative w-full overflow-hidden rounded-2xl bg-gradient-to-r from-brand-rose to-brand-fuchsia px-4 py-3 text-center text-sm font-semibold text-white shadow-[0_8px_30px_theme(colors.brand.fuchsia/.25)] ring-1 ring-white/10 transition hover:brightness-110 hover:shadow-[0_0_40px_theme(colors.brand.fuchsia/.55)] focus:outline-none focus:ring-2 focus:ring-brand-rose/60">
-      <span className="relative z-10">Add To The Cart</span>
-      <span className="pointer-events-none absolute -inset-1 rounded-2xl bg-gradient-to-r from-brand-rose to-brand-fuchsia blur-xl opacity-0 transition-opacity duration-300 group-hover:opacity-60 hover:opacity-80" />
-    </button>
+    <div className="relative group/cta">
+      <div className="pointer-events-none absolute -inset-3 rounded-3xl bg-gradient-to-r from-brand-rose/0 via-brand-fuchsia/50 to-brand-rose/0 blur-2xl opacity-0 transition-opacity duration-300 group-hover/cta:opacity-100" />
+      <button className="relative z-10 w-full rounded-2xl bg-gradient-to-r from-brand-rose to-brand-fuchsia px-4 py-3 text-center text-sm font-semibold text-white ring-1 ring-white/10 transition hover:brightness-110 focus:outline-none focus:ring-2 focus:ring-brand-rose/60">
+        Add To The Cart
+      </button>
+    </div>
   );
 }
 
 function GameCard({ game }: { game: Game }) {
   return (
-    <div className="group relative overflow-hidden rounded-3xl border border-white/10 bg-[linear-gradient(180deg,rgba(255,255,255,0.04),rgba(255,255,255,0.02))] p-4 shadow-[0_0_1px_0_rgba(255,255,255,0.08)] backdrop-blur transition-shadow duration-300 group-hover:shadow-[0_0_60px_theme(colors.brand.fuchsia/.45)]">
-      {/* top preview */}
-      <div className="relative h-44 w-full overflow-hidden rounded-2xl bg-gradient-to-br from-zinc-800/60 via-zinc-900/50 to-black/60">
-        <div className="absolute inset-0 bg-[radial-gradient(500px_200px_at_60%_0%,theme(colors.brand.rose/.25),transparent)]" />
-        <div className="absolute inset-0 opacity-0 transition-opacity group-hover:opacity-100 bg-[radial-gradient(500px_200px_at_30%_100%,theme(colors.brand.fuchsia/.25),transparent)]" />
-        {game.badge && (
-          <span className="absolute left-3 top-3 inline-flex items-center gap-1 rounded-full bg-white/10 px-2.5 py-1 text-xs font-semibold text-white ring-1 ring-white/15">
-            <Star className="h-3.5 w-3.5 text-brand-rose" /> {game.badge}
-          </span>
-        )}
-      </div>
+    <div className="relative group">
+      {/* OUTER glow behind card */}
+      <div className="pointer-events-none absolute -inset-4 rounded-3xl bg-gradient-to-r from-brand-rose/0 via-brand-fuchsia/45 to-brand-rose/0 blur-2xl opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
 
-      {/* content */}
-      <div className="p-4">
-        <h3 className="text-xl font-semibold text-white">{game.title}</h3>
-        <p className="mt-2 text-sm text-white/70">{game.description}</p>
-        <div className="mt-4 flex flex-wrap gap-2">
-          {game.tags.map((t) => (
-            <Tag key={t}>{t}</Tag>
-          ))}
+      {/* Card body (clipped) */}
+      <div className="relative overflow-hidden rounded-3xl border border-white/10 bg-[linear-gradient(180deg,rgba(255,255,255,0.04),rgba(255,255,255,0.02))] p-4 shadow-[0_0_1px_0_rgba(255,255,255,0.08)] backdrop-blur">
+        {/* top preview */}
+        <div className="relative h-44 w-full overflow-hidden rounded-2xl bg-gradient-to-br from-zinc-800/60 via-zinc-900/50 to-black/60">
+          <div className="absolute inset-0 bg-[radial-gradient(500px_200px_at_60%_0%,theme(colors.brand.rose/.25),transparent)]" />
+          <div className="absolute inset-0 opacity-0 transition-opacity group-hover:opacity-100 bg-[radial-gradient(500px_200px_at_30%_100%,theme(colors.brand.fuchsia/.25),transparent)]" />
+          {game.badge && (
+            <span className="absolute left-3 top-3 inline-flex items-center gap-1 rounded-full bg-white/10 px-2.5 py-1 text-xs font-semibold text-white ring-1 ring-white/15">
+              <Star className="h-3.5 w-3.5 text-brand-rose" /> {game.badge}
+            </span>
+          )}
         </div>
-        <div className="mt-5">
-          <CTAButton />
-        </div>
-      </div>
 
-      <div className="pointer-events-none absolute inset-0 rounded-3xl ring-1 ring-white/10" />
-      <div className="pointer-events-none absolute -inset-1 rounded-3xl opacity-0 bg-gradient-to-r from-brand-rose/0 via-brand-fuchsia/35 to-brand-rose/0 blur-xl transition-opacity duration-300 group-hover:opacity-100" />
-      <div className="pointer-events-none absolute -inset-px rounded-3xl opacity-0 ring-2 ring-brand-rose/40 transition group-hover:opacity-100" />
+        {/* content */}
+        <div className="p-4">
+          <h3 className="text-xl font-semibold text-white">{game.title}</h3>
+          <p className="mt-2 text-sm text-white/70">{game.description}</p>
+          <div className="mt-4 flex flex-wrap gap-2">
+            {game.tags.map((t) => (
+              <Tag key={t}>{t}</Tag>
+            ))}
+          </div>
+          <div className="mt-5">
+            <CTAButton />
+          </div>
+        </div>
+
+        <div className="pointer-events-none absolute inset-0 rounded-3xl ring-1 ring-white/10" />
+      </div>
     </div>
   );
 }
