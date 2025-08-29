@@ -100,20 +100,16 @@ function Step({ index, label, active }: { index: number; label: string; active?:
 
 function Tag({ children }: { children: React.ReactNode }) {
   return (
-    <span className="relative inline-flex group">
-      <span className="pointer-events-none absolute -inset-2 rounded-full bg-gradient-to-r from-brand-rose/0 via-brand-fuchsia/45 to-brand-rose/0 blur-lg opacity-0 transition-opacity duration-200 group-hover:opacity-100" />
-      <span className="relative inline-flex items-center gap-1 rounded-full border border-white/10 bg-white/[0.03] px-2.5 py-1 text-xs text-white/80">
-        <Check className="h-3.5 w-3.5 text-brand-rose" /> {children}
-      </span>
+    <span className="inline-flex items-center gap-1 rounded-full border border-white/10 bg-white/[0.03] px-2.5 py-1 text-xs text-white/80 transition shadow-[0_0_0_rgba(0,0,0,0)] hover:ring-2 hover:ring-brand-rose/50 hover:shadow-[0_0_16px_theme(colors.brand.fuchsia/.45)]">
+      <Check className="h-3.5 w-3.5 text-brand-rose" /> {children}
     </span>
   );
 }
 
 function CTAButton() {
   return (
-    <div className="relative group/cta">
-      <span className="pointer-events-none absolute -inset-3 rounded-3xl bg-gradient-to-r from-brand-rose/0 via-brand-fuchsia/50 to-brand-rose/0 blur-2xl opacity-0 transition-opacity duration-300 group-hover/cta:opacity-100" />
-      <button className="relative z-10 w-full rounded-2xl bg-gradient-to-r from-brand-rose to-brand-fuchsia px-4 py-3 text-center text-sm font-semibold text-white ring-1 ring-white/10 transition hover:brightness-110 focus:outline-none focus:ring-2 focus:ring-brand-rose/60">
+    <div className="relative">
+      <button className="w-full rounded-2xl bg-gradient-to-r from-brand-rose to-brand-fuchsia px-4 py-3 text-center text-sm font-semibold text-white ring-1 ring-white/10 transition hover:brightness-110 hover:ring-2 hover:ring-brand-rose/60 hover:shadow-[0_0_28px_theme(colors.brand.fuchsia/.55)] focus:outline-none">
         Add To The Cart
       </button>
     </div>
