@@ -15,10 +15,10 @@
     --background: 0 0% 100%;
     --foreground: 222.2 84% 4.9%;
     /* Brand palette */
-    --brand-rose: 338 90% 55%;
-    --brand-fuchsia: 296 85% 55%;
-    --brand-burgundy: 330 15% 8%;
-    --brand-surface: 330 18% 10%;
+    --brand-rose: 222 90% 62%;
+    --brand-fuchsia: 255 85% 70%;
+    --brand-burgundy: 224 25% 9%;
+    --brand-surface: 224 22% 12%;
 
     --card: 0 0% 100%;
     --card-foreground: 222.2 84% 4.9%;
@@ -91,14 +91,14 @@
 
     --border: 330 15% 22%;
     --input: 330 15% 22%;
-    --ring: 335 90% 60%;
+    --ring: var(--brand-rose);
     --sidebar-background: var(--brand-surface);
     --sidebar-foreground: 0 0% 96%;
     --sidebar-primary: var(--brand-rose);
     --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 330 22% 16%;
+    --sidebar-accent: 224 22% 16%;
     --sidebar-accent-foreground: 0 0% 96%;
-    --sidebar-border: 330 20% 22%;
+    --sidebar-border: 224 20% 22%;
     --sidebar-ring: var(--brand-rose);
   }
 }
