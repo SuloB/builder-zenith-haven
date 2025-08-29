@@ -14,6 +14,11 @@
   :root {
     --background: 0 0% 100%;
     --foreground: 222.2 84% 4.9%;
+    /* Brand palette */
+    --brand-rose: 338 90% 55%;
+    --brand-fuchsia: 296 85% 55%;
+    --brand-burgundy: 330 15% 8%;
+    --brand-surface: 330 18% 10%;
 
     --card: 0 0% 100%;
     --card-foreground: 222.2 84% 4.9%;
@@ -60,7 +65,7 @@
   }
 
   .dark {
-    --background: 330 15% 8%;
+    --background: var(--brand-burgundy);
     --foreground: 0 0% 98%;
 
     --card: 330 15% 10%;
@@ -69,7 +74,7 @@
     --popover: 330 15% 10%;
     --popover-foreground: 0 0% 98%;
 
-    --primary: 335 90% 60%;
+    --primary: var(--brand-rose);
     --primary-foreground: 0 0% 100%;
 
     --secondary: 330 25% 14%;
@@ -78,7 +83,7 @@
     --muted: 330 20% 18%;
     --muted-foreground: 0 0% 85%;
 
-    --accent: 335 80% 58%;
+    --accent: var(--brand-fuchsia);
     --accent-foreground: 0 0% 100%;
 
     --destructive: 0 84.2% 60.2%;
@@ -87,14 +92,14 @@
     --border: 330 15% 22%;
     --input: 330 15% 22%;
     --ring: 335 90% 60%;
-    --sidebar-background: 330 18% 10%;
+    --sidebar-background: var(--brand-surface);
     --sidebar-foreground: 0 0% 96%;
-    --sidebar-primary: 335 86% 56%;
+    --sidebar-primary: var(--brand-rose);
     --sidebar-primary-foreground: 0 0% 100%;
     --sidebar-accent: 330 22% 16%;
     --sidebar-accent-foreground: 0 0% 96%;
     --sidebar-border: 330 20% 22%;
-    --sidebar-ring: 335 90% 60%;
+    --sidebar-ring: var(--brand-rose);
   }
 }
 
