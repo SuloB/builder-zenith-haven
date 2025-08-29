@@ -128,7 +128,7 @@ export default function Particles({ className }: Props) {
         // hanging string
         ctx.beginPath();
         ctx.moveTo(p.x, capY - 0.5);
-        ctx.lineTo(p.x, capY - p.stringLen);
+        ctx.lineTo(p.x, 8);
         ctx.strokeStyle = `rgba(255,255,255,0.35)`;
         ctx.lineWidth = 1;
         ctx.stroke();
