@@ -120,6 +120,7 @@ function GameCard({ game }: { game: Game }) {
   return (
     <div className="relative group">
       {/* OUTER glow behind card */}
+      <div className="pointer-events-none absolute -inset-3 rounded-3xl bg-gradient-to-r from-brand-rose/0 via-brand-fuchsia/45 to-brand-rose/0 blur-2xl opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
       
 
       {/* Card body (clipped) */}
