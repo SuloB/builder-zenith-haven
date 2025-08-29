@@ -139,13 +139,7 @@ export default function Particles({ className }: Props) {
         ctx.strokeStyle = "rgba(255,240,200,0.9)";
         ctx.lineWidth = 1;
         ctx.stroke();
-        // string to top
-        ctx.beginPath();
-        ctx.moveTo(p.x, capY - 0.5);
-        ctx.lineTo(p.x, capY - p.stringLen);
-        ctx.strokeStyle = `rgba(255,255,255,0.35)`;
-        ctx.lineWidth = 1;
-        ctx.stroke();
+        // (string removed as requested)
       }
 
       ctx.globalCompositeOperation = "source-over";
