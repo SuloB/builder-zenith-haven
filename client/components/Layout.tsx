@@ -4,7 +4,7 @@ import { useMemo } from "react";
 function BrandMark() {
   return (
     <Link to="/" aria-label="Prism" className="inline-flex items-center gap-2">
-      <span className="relative grid place-items-center h-8 w-8 rounded-full bg-gradient-to-br from-rose-500 to-fuchsia-600 shadow-[0_0_40px_theme(colors.rose.500/.35)]">
+      <span className="relative grid place-items-center h-8 w-8 rounded-full bg-gradient-to-br from-brand-rose to-brand-fuchsia shadow-[0_0_40px_theme(colors.brand.rose/.35)]">
         <span className="absolute inset-0 rounded-full ring-1 ring-white/15" />
         <span className="font-extrabold text-white">P</span>
       </span>
@@ -27,8 +27,8 @@ export default function Layout() {
     <div className="min-h-screen text-white bg-[radial-gradient(1000px_500px_at_70%_20%,rgba(244,63,94,0.18),transparent),radial-gradient(800px_400px_at_80%_70%,rgba(217,70,239,0.15),transparent),linear-gradient(180deg,hsl(var(--background)),hsl(var(--background)))]">
       {/* top gradient edge */}
       <div className="pointer-events-none absolute inset-0 -z-10 overflow-hidden">
-        <div className="absolute -top-24 -left-24 h-[480px] w-[480px] rounded-full bg-rose-600/20 blur-[100px]" />
-        <div className="absolute top-40 -right-24 h-[420px] w-[420px] rounded-full bg-fuchsia-600/20 blur-[90px]" />
+        <div className="absolute -top-24 -left-24 h-[480px] w-[480px] rounded-full bg-brand-rose/20 blur-[100px]" />
+        <div className="absolute top-40 -right-24 h-[420px] w-[420px] rounded-full bg-brand-fuchsia/20 blur-[90px]" />
       </div>
 
       <header className="sticky top-0 z-40 backdrop-blur supports-[backdrop-filter]:bg-black/30 bg-black/20 border-b border-white/10">
