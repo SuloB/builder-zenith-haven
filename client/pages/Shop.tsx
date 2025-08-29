@@ -124,7 +124,7 @@ function GameCard({ game }: { game: Game }) {
       
 
       {/* Card body (clipped) */}
-      <div className="relative overflow-hidden rounded-3xl border border-white/10 bg-[linear-gradient(180deg,rgba(255,255,255,0.04),rgba(255,255,255,0.02))] p-4 shadow-[0_0_1px_0_rgba(255,255,255,0.08)] backdrop-blur">
+      <div className="relative overflow-hidden rounded-3xl border border-white/10 bg-[linear-gradient(180deg,rgba(255,255,255,0.04),rgba(255,255,255,0.02))] p-4 shadow-[0_0_1px_0_rgba(255,255,255,0.08)] backdrop-blur transition hover:bg-white/[0.04]">
         {/* top preview */}
         <div className="relative h-44 w-full overflow-hidden rounded-2xl bg-gradient-to-br from-zinc-800/60 via-zinc-900/50 to-black/60">
           <div className="absolute inset-0 bg-[radial-gradient(500px_200px_at_60%_0%,theme(colors.brand.rose/.25),transparent)]" />
@@ -150,6 +150,7 @@ function GameCard({ game }: { game: Game }) {
         </div>
 
         <div className="pointer-events-none absolute inset-0 rounded-3xl ring-1 ring-white/10" />
+      <div className="pointer-events-none absolute -inset-px rounded-3xl opacity-0 ring-2 ring-brand-rose/40 transition group-hover:opacity-100" />
       </div>
     </div>
   );
